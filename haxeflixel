@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ -n "$1" ]]; then
+    haxelib run flixel-tools tpl -n "$1"
+    cd "$1"
+    mv Project.xml project.xml
+else
+    echo "Usage: ./haxeflixel name"
+fi
